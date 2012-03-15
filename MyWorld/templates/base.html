@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>My World</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" bgcolor="#ebf4e8">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+	<tr>
+		<td valign="top" align="center">
+			<table width="550" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left" bgcolor="#ffffff">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+                	<td><img src="{{ MEDIA_URL }}i-01.gif" alt=" " width="550" height="19"></td>
+                </tr>
+                <tr>
+									<td style="border-left:1px solid #a9d19a; border-right:1px solid #a9d19a;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td valign="top" style="padding:0 0 0 20px;"><a href="http://127.0.0.1:8000/"><img src="{{ MEDIA_URL }}logo.gif" alt="Yout Company Name" width="156" height="30" style="margin:20px 0 0 0;"></a></td>
+												<td width="102"><img src="{{ MEDIA_URL }}i-02.gif" alt=" " width="102" height="98"></td>
+                        <td width="165" valign="top">
+                            {% block top_right %}
+                            {% endblock top_right %}
+                        </td>
+                      </tr>
+										</table>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><img src="{{ MEDIA_URL }}i-06.gif" alt=" " width="548" height="14"></td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td style="background-color:#4ea12d; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#fff; padding:0 0 0 20px;" bgcolor="#4ea12d">{% block heading %} {% endblock heading %}</td>
+                              <td width="185"><img src="{{ MEDIA_URL }}i-07.gif" alt=" " width="185" height="24"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ MEDIA_URL }}i-08.gif" alt=" " width="548" height="24"></td>
+                      </tr>
+                    </table>
+                    <table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					{% block middle %}
+					{% endblock middle %}
+				</td>
+			</tr>
+                    </table>
+                    <table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+				</td>
+			</tr>
+                    </table>
+												</td>
+											</tr>
+										</table>
+                    <table style="background-color:#f6faf4; border-top:1px solid #cce4c3;" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#484848; line-height:17px; padding:0 10px 0 15px;" valign="middle">
+                          <b>Your Company Name</b><br>
+                          123 Your Address, Your City, State, Zip<br>
+                          <a href="mailto:info@yourcompany.com" style="color:#016096;">info@yourcompany.com</a><br>
+                          <a href="http://www.yourcompany.com" style="color:#016096;">www.yourcompany.com</a>
+                        </td>
+                        <td width="100"><img src="{{ MEDIA_URL }}i-10.gif" alt=" " width="100" height="86"></td>
+                      </tr>
+                    </table>
+									</td>
+								</tr>
+                <tr>
+                	<td><img src="{{ MEDIA_URL }}i-09.gif" alt=" " width="550" height="25"></td>
+                </tr>
+							</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="padding:20px 0 10px 10px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#68805e;">
+						To ensure our newsletter always reaches your inbox, please add <a href="mailto:info@yourcompany.com" style="color:#4b7b38;">info@yourcompany.com</a> to your<br>
+						address book. If you prefer not to receive news from Your Company Name in the future, you can<br>
+						<a href="[UNSUBSCRIBE]" style="color:#4b7b38;">unsubscribe here</a>.
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+{% block bottom %}
+{% endblock bottom %}
+</body>
+</html>

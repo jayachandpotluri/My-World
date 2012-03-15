@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block heading %}
+    View Comments
+{% endblock heading %}
+
+{% block middle %}
+    Hello {{ user_profile_object.user }}, your comments are: <br>
+    {% for comment_rating in comments_ratings_object %}
+        <table>
+            <tr>
+                <td><b>Place</b></td>
+                <td><b>
+                    Title: {{ comment_rating.place.title }} <br>
+                    Description:{{ comment_rating.place.description }} <br>
+                    Longitude: {{ comment_rating.place.longitude }} <br>
+                    Latitude: {{ comment_rating.place.latitude }}
+                </b></td>
+            </tr>
+            <tr>
+                <td>Comments: </td>
+                <td>{{ comment_rating.comment }}</td>
+            </tr>
+            <tr>
+                <td>Rating: </td>
+                <td>{{ comment_rating.rating }}</td>
+            </tr>
+            <tr>
+                <td>Posted on: </td>
+                <td>{{ comment_rating.posted_on }}</td>
+            </tr>
+        </table>
+    {% endfor %}
+{% endblock middle %}

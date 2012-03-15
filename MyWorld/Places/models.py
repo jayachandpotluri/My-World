@@ -1,5 +1,6 @@
 from django.db import models
-from MyWorld.MyWorldUsers.models import UserProfile
+from MyWorldUsers.models import UserProfile
+
 # Create your models here.
 
 class Place(models.Model):
@@ -7,8 +8,8 @@ class Place(models.Model):
     description = models.CharField(max_length=75)
     longitude = models.DecimalField(max_digits=5, decimal_places=2)
     latitude = models.DecimalField(max_digits=5, decimal_places=2)
-    posted_by = models.ForeignKey(UserProfile)
-    posted_on = models.DateTimeField()
+    #posted_by = models.ForeignKey(User)
+    #posted_on = models.DateTimeField()
     
     def __unicode__(self):
         return "Title: " + self.title
@@ -21,12 +22,13 @@ rating_choices = (
     (5, 'Very Good')
 )
 
-class Comment(models.Model):
+class CommentRating(models.Model):
     user = models.ForeignKey(UserProfile)
     place = models.ForeignKey(Place)
     comment = models.TextField()
     rating = models.IntegerField(choices=rating_choices)
+    posted_on = models.DateTimeField()
     
-    def __unicode__(self):
-        return "Place: %s Rating: %s" % (self.place.title, rating_choices[str(self.rating)])
+    #def __unicode__(self):
+    #    return "Place: %s Rating: %s" % (self.place.title, rating_choices[str(self.rating)])
     
